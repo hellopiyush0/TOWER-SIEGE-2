@@ -4,14 +4,14 @@ class Stone {
 
         var options = {
 
-            'restitution': 0.8,
+            'restitution': 0.5,
             'friction': 0.3,
             'density': 2.0
 
         }
 
-        this.body = Bodies.circle(x, y, 30, options);
-        this.radius = 30;
+        this.body = Bodies.circle(x, y, 20, options);
+        this.radius = 20;
 
         this.image = loadImage("polygon.png");
 
@@ -27,7 +27,7 @@ class Stone {
         translate(pos.x, pos.y);
 
         imageMode(CENTER)
-        image(this.image, pos.x, pos.y, 40, 40); 
+        image(this.image, 0, 0, 40, 40); 
         pop();
 
     }

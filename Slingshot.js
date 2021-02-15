@@ -6,8 +6,8 @@ class SlingShot{
 
             bodyA: bodyA,
             pointB: pointB,
-            stiffness: 0.04,
-            length: 10
+            stiffness: 0.09,
+            length: 7
 
         }
 
@@ -31,23 +31,7 @@ class SlingShot{
             var pointB = this.pointB;
 
             stroke(48, 22, 8);
-
-            if(pointA.x<220){
-
-              strokeWeight(8);
-              line(pointA.x-20, pointA.y, pointB.x-10, pointB.y);
-              line(pointA.x-20, pointA.y, pointB.x+30, pointB.y-3);
-              image(this.sling3, pointA.x-30, pointA.y-10, 15, 30);
-
-            }
-            else{
-
-                strokeWeight(3);
-                line(pointA.x-20, pointA.y, pointB.x-10, pointB.y);
-                line(pointA.x-20, pointA.y, pointB.x+30, pointB.y-3);
-                image(this.sling3, pointA.x+25, pointA.y-10, 15, 30);  
-
-            }
+            line(pointA.x, pointA.y, pointB.x, pointB.y);
 
         }
     }
