@@ -87,6 +87,10 @@ function draw(){
 	fill("white");
     text("Drag the Hexagonal stone to realease it, to launch it towards the blocks",50 ,50);
 
+    textSize(25);
+	fill("white");
+    text("Press Space to get a second chance",50 ,90);
+
     ground.display();
     base1.display();
     base2.display();
@@ -158,3 +162,14 @@ function mouseReleased(){
     slingshot.fly();
 
 }
+
+function keyPressed(){
+
+    if (keyCode === 32){
+
+		Matter.Body.setPosition(stone.body, {x: 200, y: 375});
+        slingshot.attach(stone.body);
+
+    }
+
+} 

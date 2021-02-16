@@ -23,6 +23,12 @@ class SlingShot{
         
     }
 
+    attach(pointA){
+
+        this.sling.bodyA = pointA;
+        
+    }
+
     display(){
 
         if(this.sling.bodyA){
